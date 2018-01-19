@@ -16,10 +16,10 @@ VMwareESXiInterfaceMap gathers ESXi Interface information.
 
 """
 
-from pyVim.connect import SmartConnect, Disconnect
+from pyVim.connect import SmartConnect, Disconnect, SmartConnectNoSSL
 from pyVmomi import vim
 import atexit
-from twisted.internet.defer import returnValue, inlineCallbacks, SmartConnectNoSSL
+from twisted.internet.defer import returnValue, inlineCallbacks
 from Products.DataCollector.plugins.CollectorPlugin import PythonPlugin
 from Products.DataCollector.plugins.DataMaps import ObjectMap, RelationshipMap
 
