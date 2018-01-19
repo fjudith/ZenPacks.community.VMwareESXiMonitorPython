@@ -19,14 +19,14 @@ VMwareESXiInterfaceMap gathers ESXi Interface information.
 from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
 import atexit
-from twisted.internet.defer import returnValue, inlineCallbacks
+from twisted.internet.defer import returnValue, inlineCallbacks, SmartConnectNoSSL
 from Products.DataCollector.plugins.CollectorPlugin import PythonPlugin
 from Products.DataCollector.plugins.DataMaps import ObjectMap, RelationshipMap
 
 def getData(host, username, password, port, log):
 
     log.debug('In getData. host is %s, username is %s, password is %s, port is %s \n' % (host, username, password, port))
-    serviceInstance = SmartConnect(host=host,
+    serviceInstance = SmartConnectNoSSL(host=host,
                                    user=username,
                                    pwd=password,
                                    port=port)
