@@ -1,4 +1,4 @@
-, SmartConnectNoSSL################################################################################
+################################################################################
 #
 # This program is part of the VMwareESXiMonitor Zenpack for Zenoss.
 # Copyright (C) 2014 Eric Enns, Matthias Kittl.
