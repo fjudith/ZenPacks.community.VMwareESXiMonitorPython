@@ -21,7 +21,7 @@ from Products.Zuul.infos.template import RRDDataSourceInfo
 from Products.Zuul.interfaces import IRRDDataSourceInfo
 from Products.Zuul.utils import ZuulMessageFactory as _t
 
-from pyVim.connect import SmartConnect, Disconnect, SmartConnectNoSSL
+from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
 import atexit
 import operator
@@ -120,7 +120,7 @@ class VMwareDataSourcePlugin(PythonDataSourcePlugin):
         def getData(host, user, password, port, log):
         # make a connection
             try:
-                conn = SmartConnectNoSSL(host=host, user=user, pwd=password, port=port)
+                conn = SmartConnect(host=host, user=user, pwd=password, port=port,sslContext=ssl._create_unverified_context())
                 if not conn:
                     log.warn('Could not connect to host %s \n' % (host))
                 else:
