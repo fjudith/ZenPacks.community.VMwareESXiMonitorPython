@@ -4,7 +4,7 @@
 # NB: PACKAGES is deprecated
 NAME = "ZenPacks.community.VMwareESXiMonitorPython"
 VERSION = "3.0.5"
-AUTHOR = "Matthias Kittl, Jane Curry, Eric Enns"
+AUTHOR = "Florian Judith, Matthias Kittl, Jane Curry, Eric Enns"
 LICENSE = "GPLv2"
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.community']
 PACKAGES = ['ZenPacks', 'ZenPacks.community', 'ZenPacks.community.VMwareESXiMonitorPython']
