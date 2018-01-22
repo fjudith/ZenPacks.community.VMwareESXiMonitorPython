@@ -26,7 +26,7 @@ from pyVmomi import vim
 import atexit
 import operator
 from datetime import timedelta
-
+import ssl
 
 # Setup logging
 import logging

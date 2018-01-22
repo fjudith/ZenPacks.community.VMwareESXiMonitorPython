@@ -22,6 +22,7 @@ import atexit
 from twisted.internet.defer import returnValue, inlineCallbacks
 from Products.DataCollector.plugins.CollectorPlugin import PythonPlugin
 from Products.DataCollector.plugins.DataMaps import ObjectMap
+import ssl
 
 def getData(host, username, password, port, log):
 
